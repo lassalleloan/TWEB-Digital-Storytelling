@@ -12,7 +12,7 @@ esac
 
 function stop_all {
     echo "Stopping all launched container"
-    docker kill $(docker ps -aq) && docker rm $(docker ps -aq)
+    docker kill $(docker ps -aq) && docker rm $(docker ps -aq) && docker volume rm $(docker volume ls -q)
 }
 
 function docker_run {
