@@ -1,2 +1,6 @@
 # TWEB-Digital-Storytelling
-storytelling about Exploit-DB
+
+Authors: Tano Iannetta, Loan Lassalle
+---
+
+Storytelling about Exploit-DB
