@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# TODO: get IP address of docker
 HOST="127.0.0.1"
 
 unameOut="$(uname -s)"
