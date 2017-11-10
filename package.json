@@ -1,0 +1,27 @@
+{
+  "name": "tweb-digital-storytelling",
+  "version": "1.0.0",
+  "description": "Authors: Tano Iannetta, Loan Lassalle ---",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lassalleloan/TWEB-Digital-Storytelling.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lassalleloan/TWEB-Digital-Storytelling/issues"
+  },
+  "homepage": "https://github.com/lassalleloan/TWEB-Digital-Storytelling#readme",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
