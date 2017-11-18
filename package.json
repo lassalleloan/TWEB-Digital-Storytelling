@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/lassalleloan/TWEB-Digital-Storytelling#readme",
   "devDependencies": {
+    "@types/d3": "4.11.1",
     "d3": "^4.11.0",
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
