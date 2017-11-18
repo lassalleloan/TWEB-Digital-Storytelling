@@ -1,38 +1,42 @@
 #!/bin/bash
+#
+# Start php/apache docker container and open browser 
+# author: Loan Lassalle
 
-HOST="127.0.0.1"
+HOST=127.0.0.1
+PORT_HOST=8080
+BROWSER=open
 
-uname="$(uname -s)"
-case "${uname}" in
-    Linux*)
+# Open OS default browser
+case "$OSTYPE" in
+    darwin*)
+        BROWSER=open;;
+    linux*)
         BROWSER=xdg-open;;
+    msys*)
+        BROWSER=start;;
     *)
-        BROWSER=open
+        echo "unknown: $OSTYPE" 
+        exit 0;;
 esac
 
-function stop_all {
-    echo "Stopping all launched container"
-    docker kill $(docker ps -aq) 2>/dev/null && docker rm $(docker ps -aq) 2>/dev/null && docker volume rm $(docker volume ls -q) 2>/dev/null
+# Start container
+function start {
+    echo "Starting php/apache docker container"
+    docker build -t php/apache .
+    docker run --rm -d --name php-apache -p $PORT_HOST:80 php/apache
+    $BROWSER "http://${HOST}:${PORT_HOST}/"
 }
 
-function docker_run {
-    local site_port=8080
-
-    echo "Run docker infrastructure"
-
-    docker build -t php/php .
-    docker run -d --name php -p 8080:80 php/php
-    $BROWSER "http://$HOST:$site_port/"
+# Stop container
+function stop {
+    echo "Stopping all docker container"
+    docker kill $(docker ps -aq) 2>/dev/null && docker rm $(docker ps -aq) 2>/dev/null && docker volume rm $(docker volume ls -q) 2>/dev/null
+    #docker rmi -f $(docker images | tr -s '       ' ' ' | cut -d ' ' -f 3) 2>/dev/null
 }
 
 # Main
-
-# Stop old containers
-stop_all
-
-# Launch containers
-docker_run
-
-# Stop current containers after user action
+stop
+start
 read -p "Press any key to stop all docker container ..."
-stop_all
+stop
