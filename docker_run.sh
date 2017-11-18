@@ -2,8 +2,8 @@
 
 HOST="127.0.0.1"
 
-unameOut="$(uname -s)"
-case "${unameOut}" in
+uname="$(uname -s)"
+case "${uname}" in
     Linux*)
         BROWSER=xdg-open;;
     *)
@@ -12,7 +12,7 @@ esac
 
 function stop_all {
     echo "Stopping all launched container"
-    docker kill $(docker ps -aq) && docker rm $(docker ps -aq) && docker volume rm $(docker volume ls -q)
+    docker kill $(docker ps -aq) 2>/dev/null && docker rm $(docker ps -aq) 2>/dev/null && docker volume rm $(docker volume ls -q) 2>/dev/null
 }
 
 function docker_run {
@@ -26,5 +26,13 @@ function docker_run {
 }
 
 # Main
-stop_all # stop old containers
-docker_run # launch containers
+
+# Stop old containers
+stop_all
+
+# Launch containers
+docker_run
+
+# Stop current containers after user action
+read -p "Press any key to stop all docker container ..."
+stop_all

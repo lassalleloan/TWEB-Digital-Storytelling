@@ -33,3 +33,9 @@ header.masthead>.overlay {
     padding: 10rem 0;
   }
 }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
