@@ -34,7 +34,7 @@
       <div class="overlay">
         <div class="container">
           <h1 class="display-1 text-white">Exploits Database</h1>
-          <h4 class="display-5 text-white">A story about Offensive Security’s Exploit...</h4>
+          <h4 class="display-5 text-white">A story about Offensive Security’s Exploits...</h4>
           <br><br><br><br>
           <h6 class="display-6 text-white">Galahad &amp; AvendoBlack</h6>
           <h6 class="display-6 text-white">November 5, 2017</h6>
@@ -49,19 +49,79 @@
           <div class="row-md-6">
             <div class="p-5">
               <p>
+              <h2 class="section-heading">Offensive security</h2>
+                <a href="https://www.offensive-security.com/">Offensive security</a> is a company that work in information security.
+                They provide tools, certification and even training courses.
+                They are particularly behind the well know <a href="https://en.wikipedia.org/wiki/Kali_Linux">Kali Linux</a> distribution which succeeds to BackTrack.
+                Kali linux is at this day very used in security and is one of the best distribution for pentesting.<br/>
+                Offensive security's vision is that there is a huge gap between "defensive" and "offensive" security.
+                Their goal is to reduce this gap based on the motto that the best defense is the attack.
+                Indeed, the best way to protect ourself from attackers is to know how they perform their attacks. <br/>
+                Others offensive security's projects include Metasploit, Kali NetHunter, Google Hacking Database and Exploit-db.
+                It is this last project that we will discuss in this post. <br/>
+                If you are into security or just curious feel free to consult their <a href="https://www.offensive-security.com/">site</a>.
+              <p/>
+              <h2 class="section-heading">Exploit-db</h2>
+              <p>
+                Exploit-db is a database that lists various known exploits. It contains proof of concept or sometimes just the
+                right way to exploit a known vulnerability. <br/>
+                If you are a kali's user, the database is available with the <i>searchsploit</i> command. It is not a problem if you are not using
+                kali right now as you can consult the database on the <a href="https://www.exploit-db.com/">site</a>. <br/>
+                Those exploits are useful as they can be used when performing a pentest to exploit a discovered vulnerability with the ultimate aim
+                of obtaining administrator rights on a compromised machine.
+              <p/>
+
+              <!-- Number of exploits by date -->
+              <section>
+                <div class="container" id="exploits-by-date" width="1024" height="512">
+                </div>
+              </section>
+
+              <p>
+                We can see on the previous graph the number of exploits entered in the database by year. <br/>
+                The real beginning of the use of exploit-db is around 1997. It can be seen that at this time there were not
+                many exploits listed. This is undoubtedly because at that time security was less present in people's mind.
+                We can see that this sate of mind changes from 2005. Indeed, we can estimate that it is at this time
+                that the security information
+                become more preoccupying and more widespread. But then why the number of exploit drops drastically from 2011 ?
+                Security is no longer the taste of the day ? Of course not, it stills really preoccupying.
+                Are our systems more secure ?
+                The number of malware developed, and the number of press articles telling about large companies
+                that have suffered an attack show us that this is not the case.
+                So why does the number of listed exploits go down ?
+              </p>
+              <p>
+                This is because of a new type of market. This is a market of vulnerabilities and exploits.
+                Where a good person who has found a 0day vulnerability or designed
+                a PoC to exploit it will shows his work to the community and make it available so that others users can
+                correct the vulnerability; a less well intentioned person will sell his work. <br/>
+                Selling vulnerabilities and exploits can indeed be very lucrative. McAfee estimates that the cost of
+                <a href="https://en.wikipedia.org/wiki/Cybercrime">cybercrime</a> and
+                <a href="https://en.wikipedia.org/wiki/Cyber_spying">cyberespionage</a> is somewhere around
+                $160 billion per year. From there, it is easy to say that 0day exploit are as precious as gold, sometimes even more !
+              </p>
+              <p>
+                So our system will never be 100% secure, it will never be possible. Security is improving, but the exploits become
+                more complex and therefore have more value. It is very difficult to estimate how vulnerabilities market
+                will evolve but this is a problem that shall not be underestimate. Even if we will not dig any more
+                on the market subject on this post, we invite you to dig on your side.
 
               </p>
+
+              Sources:
+              <ul>
+                <li>https://en.wikipedia.org/wiki/Kali_Linux</li>
+                <li>https://www.offensive-security.com/</li>
+                <li>https://www.exploit-db.com/</li>
+                <li>https://en.wikipedia.org/wiki/Market_for_zero-day_exploits</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Number of exploits by date -->
-    <section>
-      <div class="container" id="exploits-by-date" width="1024" height="512">
-      </div>
-    </section>
+
 
     <!-- <section>
       <div class="container">
