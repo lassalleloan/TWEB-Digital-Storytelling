@@ -64,6 +64,7 @@ function stop {
     #docker stop ${container_name} 2>/dev/null && docker kill ${container_name} 2>/dev/null && docker rm --volumes ${container_name} 2>/dev/null && docker volume rm --force ${volume_name} 2>/dev/null && docker image rm --force ${image_tag} 2>/dev/null
     #docker stop $(docker ps --all --quiet) 2>/dev/null && docker kill $(docker ps --all --quiet) 2>/dev/null && docker rm --volumes $(docker ps --all --quiet) 2>/dev/null && docker volume rm --force $(docker volume ls --quiet) 2>/dev/null && docker image rm --force $(docker images --all --quiet) 2>/dev/null
     #docker volume prune --force 2>/dev/null && docker image prune --force 2>/dev/null
+    #docker rmi $(docker images -f "dangling=true" -q)
 }
 
 # Main
