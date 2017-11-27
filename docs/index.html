@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml">
 
   <head>
 
@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <style>
+      img{
+        float: right;
+      }
+    </style>
 
     <title>TWEB - Digital Storytelling</title>
 
@@ -63,6 +69,7 @@
               <p/>
               <h2 class="section-heading">Exploit-db</h2>
               <p>
+                <img src="images/edb.png" style="width: 300px;px;height:100px;margin-right:15px;">
                 Exploit-db is a database that lists various known exploits. It contains proof of concept or sometimes just the
                 right way to exploit a known vulnerability. <br/>
                 If you are a Kali's user, the database is available with the <i>searchsploit</i> command. It is not a problem if you are not using
@@ -97,7 +104,7 @@
                 Selling vulnerabilities and exploits can indeed be very lucrative. McAfee estimates that the cost of
                 <a href="https://en.wikipedia.org/wiki/Cybercrime">cybercrime</a> and
                 <a href="https://en.wikipedia.org/wiki/Cyber_spying">cyberespionage</a> is somewhere around
-                $160 billion per year. From there, it is easy to say that 0day exploit are as precious as gold, sometimes even more !
+                $160 billion per year. From there, it is easy to say that 0day exploits are as precious as gold, sometimes even more !
               </p>
               <p>
                 So our system will never be 100% secure, it will never be possible. Security is improving, but the exploits become
@@ -132,12 +139,36 @@
                 some web applications not critical.
               </p>
 
+              <!-- Number of exploits by date -->
+              <h2 class="section-heading">Conclusion</h2>
+              <p>
+                As we have seen in this post, a database of known exploit is very. By having access to these exploits,
+                it is possible to test our application to ensure a good security. Although a 100% security does not exist,
+                exploit-db allows us to attest to a relative security at a given moment when performing pentest or
+                other security assessments. <br/>
+              <p/>
+              <p>
+                Let's hope that a database like this resists to the market of vulnerabilities. Indeed, as we saw there are
+                fewer entries theses times in the database. This implies that some exploits already developed or even in use
+                are not known, or kept secret. <br/>
+                It is therefore harder to protect yourself. Let's hope that the "defensive" part of the information system
+                security evolves quickly enough to warn us of these exploits as much as possible. <br/>
+              <p/>
+
+              <p>
+                Note that this short article is only an analysis on a PoC database, so it is only a very small
+                part of computer security. Nevertheless we encourage you to join this awesome community of security enthusiasts.
+              </p>
+
+              <a href="https://github.com/galahad1">Galahad</a> and
+              <a href="https://github.com/lassalleloan">AvendoBlack</a> <br/><br/>
+
               Sources:
               <ul>
-                <li>https://en.wikipedia.org/wiki/Kali_Linux</li>
-                <li>https://www.offensive-security.com/</li>
-                <li>https://www.exploit-db.com/</li>
-                <li>https://en.wikipedia.org/wiki/Market_for_zero-day_exploits</li>
+                <li><a href="https://en.wikipedia.org/wiki/Kali_Linux">https://en.wikipedia.org/wiki/Kali_Linux</a></li>
+                <li><a href="https://www.offensive-security.com/">https://www.offensive-security.com/</a> </li>
+                <li><a href="https://www.exploit-db.com/">https://www.exploit-db.com/</a> </li>
+                <li><a href="https://en.wikipedia.org/wiki/Market_for_zero-day_exploits">https://en.wikipedia.org/wiki/Market_for_zero-day_exploits</a> </li>
               </ul>
             </div>
           </div>
