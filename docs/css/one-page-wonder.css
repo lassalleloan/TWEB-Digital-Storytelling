@@ -34,12 +34,6 @@ header.masthead>.overlay {
   }
 }
 
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 2px;
-}
-
 .node {
   border: solid 1px white;
   font: 10px sans-serif;
@@ -47,4 +41,14 @@ header.masthead>.overlay {
   overflow: hidden;
   position: absolute;
   text-indent: 2px;
+}
+
+svg {
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
 }
