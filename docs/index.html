@@ -8,12 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <style>
-      img{
-        float: right;
-      }
-    </style>
-
     <title>TWEB - Digital Storytelling</title>
 
     <!-- Bootstrap core CSS -->
@@ -42,8 +36,8 @@
           <h1 class="display-1 text-white">Exploits Database</h1>
           <h4 class="display-5 text-white">A story about Offensive Security’s Exploits...</h4>
           <br><br><br><br>
-          <h6 class="display-6 text-white">Galahad &amp; AvendoBlack</h6>
-          <h6 class="display-6 text-white">November 5, 2017</h6>
+          <h6 class="display-6 text-white"><a class="author" href="https://github.com/galahad1">Galahad</a> &amp; <a class="author" href="https://github.com/lassalleloan">AvendoBlack</a></h6>
+          <h6 class="display-6 text-white">Last update on November 29, 2017</h6>
         </div>
       </div>
     </header>
@@ -54,9 +48,10 @@
         <div class="row align-items-center">
           <div class="row-md-6">
             <div class="p-5">
+              
               <h2 class="section-heading">Offensive security</h2>
-              <p>
-              <a href="https://www.offensive-security.com/">Offensive security</a> is a company that work in information security.
+              <p id="text">
+                <a href="https://www.offensive-security.com/">Offensive security</a> is a company that work in information security.
                 They provide tools, certification and even training courses.
                 They are particularly behind the well know <a href="https://en.wikipedia.org/wiki/Kali_Linux">Kali Linux</a> distribution which succeeds BackTrack.
                 Kali linux is at this day very used in security and is one of the best distribution for pentesting.<br/>
@@ -66,26 +61,31 @@
                 Others offensive security's projects include Metasploit, Kali NetHunter, Google Hacking Database and Exploit-db.
                 It is this last project that we will discuss about in this post. <br/>
                 If you are into security or just curious, feel free to consult their <a href="https://www.offensive-security.com/">site</a>.
-              <p/>
+              </p>
+              <br/>
+
               <h2 class="section-heading">Exploit-db</h2>
-              <p>
-                <img src="images/edb.png" style="width: 300px;height:100px;margin-right:15px;">
+              <p id="text">
+                <img id="exploitsDBLogo" src="images/edb.png">
                 Exploit-db is a database that lists various known exploits. It contains proof of concept or sometimes just the
                 right way to exploit a known vulnerability. <br/>
                 If you are a Kali's user, the database is available with the <i>searchsploit</i> command. It is not a problem if you are not using
                 kali right now as you can consult the database on the <a href="https://www.exploit-db.com/">site</a>. <br/>
                 Those exploits are useful as they can be used when performing a pentest to exploit a discovered vulnerability with the ultimate aim
                 of obtaining administrator rights on a compromised machine.
-              <p/>
-
-              <p>
-                <!-- Number of exploits by date -->
-              <h2 class="section-heading">Number of exploits in the Database</h2>
-              <div class="container" id="exploits-by-date" style="width: 1024px;height: 533px" width="1024" height="533">
-              </div>
               </p>
-              <p>
-              We can see on the previous graph the number of exploits entered in the database by year. <br/>
+              <br/>
+              <br/>
+
+              <!-- Number of exploits by date -->
+              <h2 class="section-heading">Number of exploits in the Database</h2>
+              <br/>
+              <div class="container" id="exploits-by-date" width="1024" height="533">
+              </div>
+              <br/>
+
+              <p id="text">
+                We can see on the previous graph the number of exploits entered in the database by year. <br/>
                 The real beginning of the use of exploit-db is around 1997. It can be seen that at this time there were not
                 many exploits listed. This is undoubtedly because at that time security was less present in people's mind.
                 We can see that this sate of mind changes from 2005. Indeed, we can estimate that it is at this time
@@ -97,7 +97,7 @@
                 that have suffered an attack show us that this is not the case.
                 So why does the number of listed exploits go down ?
               </p>
-              <p>
+              <p id="text">
                 This is because of a new type of market. This is a market of vulnerabilities and exploits.
                 Where a good person who has found a 0day vulnerability or designed
                 a PoC to exploit it will shows his work to the community and make it available so that others users can
@@ -107,32 +107,23 @@
                 <a href="https://en.wikipedia.org/wiki/Cyber_spying">cyberespionage</a> is somewhere around
                 $160 billion per year. From there, it is easy to say that 0day exploits are as precious as gold, sometimes even more !
               </p>
-              <p>
+              <p id="text">
                 So our system will never be 100% secure, it will never be possible. Security is improving, but the exploits become
                 more complex and therefore have more value. It is very difficult to estimate how vulnerabilities market
                 will evolve but this is a problem that shall not be underestimate. Even if we will not dig any more
                 on the market subject on this post, we invite you to dig on your side.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Explanations -->
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="row-md-6">
-            <div class="p-5">
-              <p>
+              <br/>
+              <br/>
+              
               <h2 class="section-heading">Number of exploits per type and platform</h2>
-              </p>
+              <br/>
               <!-- Number of exploits by platfrom and type -->
-              <div class="container" id="exploits-by-platform-type" width="1024" height="533" style="width: 1024px;height: 533px;position: relative;">
+              <div class="container" id="exploits-by-platform-type" width="1024" height="533">
               </div>
+              <br/>
 
-              <!-- Number of exploits platform and type -->
-              <p>
+              <p id="text">
                 Let's take a look at the number of PoC per platform and type. <br/>
                 As you can see the php platform has a lot of PoC on webapps. This is because php is really widespread
                 in webapps developments and it's easy to use make it easier to have security faults,
@@ -140,12 +131,12 @@
                 he will have a less secured application. It doesn't mean that php is less "secured",
                 it means that it is more permissive that another language (like java for instance) and therefore
                 it makes it easier to introduce programming errors and then security breaches.
-              <p>
+              </p>
+              <p id="text">
                 Now about platform, we can see that the number of PoC is proportional to the number of users of
                 a given platform. That doesn't means that there is really a platform better than any others. That
                 means that there will be more research on a platform because it is more used.
-              </p>
-              <p>
+                
                 If we look at the types of the exploits regardless of the platform, we can see that this is the same
                 conclusion we made before. The number of exploits per type depends of the use of this one. As you can imagine,
                 webapps are more widespread than operating systems(for local type) and so, there are more exploits on webapps than on local.
@@ -154,73 +145,51 @@
                 in computer science and will take care of the security of the OS as it also contains more valuable data than
                 some web applications not critical.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Number of exploits by type and date (dynamic graph) -->
-    <!--
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="row-md-6">
-            <div class="p-5">
-
-              &lt;!&ndash; Number of exploits by type and date&ndash;&gt;
-              <div class="container" id="exploits-by-type-date" width="1024" height="533">
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>-->
-
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="row-md-6">
-            <div class="p-5">
+              <br/>
+              <br/>
 
               <h2 class="section-heading">Conclusion</h2>
-              <p>
+              <p id="text">
                 As we have seen in this post, a database of known exploit is very useful. By having access to these exploits,
                 it is possible to test our application to ensure a good security. Although a 100% security does not exist,
                 exploit-db allows us to attest to a relative security at a given moment when performing pentest or
                 other security assessments. <br/>
-              <p/>
-              <p>
+                <br/>
                 Let's hope that a database like this resists to the market of vulnerabilities. Indeed, as we saw there are
                 fewer entries theses times in the database. This implies that some exploits already developed or even in use
                 are not known, or kept secret. <br/>
                 It is therefore harder to protect yourself. Let's hope that the "defensive" part of the information system
                 security evolves quickly enough to warn us of these exploits as much as possible. <br/>
-              <p/>
+              </p>
+              <br/>
+              <br/>
+              
+              <!-- Number of exploits by type and date (dynamic graph) -->
+              <div class="container" id="exploits-by-type-date" width="1024" height="533">
+              </div>
+              <br/>
 
-              <p>
+              <p id="text">
                 Note that this short article is only an analysis on a PoC database, so it is only a very small
                 part of computer security. Nevertheless we encourage you to join this awesome community of security enthusiasts.
               </p>
 
               <a href="https://github.com/galahad1">Galahad</a> and
-              <a href="https://github.com/lassalleloan">AvendoBlack</a> <br/><br/>
+              <a href="https://github.com/lassalleloan">AvendoBlack</a><br/><br/>
 
               Sources:
               <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Kali_Linux">https://en.wikipedia.org/wiki/Kali_Linux</a></li>
-                <li><a href="https://www.offensive-security.com/">https://www.offensive-security.com/</a> </li>
-                <li><a href="https://www.exploit-db.com/">https://www.exploit-db.com/</a> </li>
-                <li><a href="https://en.wikipedia.org/wiki/Market_for_zero-day_exploits">https://en.wikipedia.org/wiki/Market_for_zero-day_exploits</a> </li>
+                <li><a href="https://en.wikipedia.org/wiki/Kali_Linux">Wikipedia - Kali Linux</a></li>
+                <li><a href="https://www.offensive-security.com/">Offensive Security</a> </li>
+                <li><a href="https://www.exploit-db.com/">Exploit DB</a> </li>
+                <li><a href="https://en.wikipedia.org/wiki/Market_for_zero-day_exploits">Wikipedia - Market for Zero-Day Exploits</a> </li>
+                <li><a href="https://d3js.org">D3.js</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -243,7 +212,7 @@
     <!-- D3v3 scripts -->
     <script src="//d3js.org/d3.v3.min.js"></script>
     <!-- Visualize scripts -->
-    <!--<script src="js/visualize-exploits-by-type-date.js"></script>-->
+    <script src="js/visualize-exploits-by-type-date.js"></script>
 
   </body>
 
