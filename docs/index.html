@@ -70,7 +70,7 @@
                 Exploit-db is a database that lists various known exploits. It contains proof of concept or sometimes just the
                 right way to exploit a known vulnerability. <br/>
                 If you are a Kali's user, the database is available with the <i>searchsploit</i> command. It is not a problem if you are not using
-                kali right now as you can consult the database on the <a href="https://www.exploit-db.com/">site</a>. <br/>
+                kali right now as you can consult the database on the <a href="https://www.exploit-db.com/">site</a>.
                 Those exploits are useful as they can be used when performing a pentest to exploit a discovered vulnerability with the ultimate aim
                 of obtaining administrator rights on a compromised machine.
               </p>
@@ -115,12 +115,15 @@
               </p>
               <br/>
               <br/>
-              
+
               <h2 class="section-heading">Number of exploits per type and platform</h2>
               <br/>
               <!-- Number of exploits by platfrom and type -->
-              <div class="container" id="exploits-by-platform-type" width="1024" height="533">
+              <div class="container" id="exploits-by-platform-type" width="1104" height="713">
               </div>
+              <p id="legend">
+                Dos <div class="circle" style="background: #4682B8;"></div>Local <div class="circle" style="background: #79ADD2;"></div> Remote <div class="circle" style="background: #A6C9DF;"></div> Shellcode <div class="circle" style="background:  #CADBEA;"></div> Webapps <div class="circle" style="background: #D65E2A;"></div>
+              </p>
               <br/>
 
               <p id="text">
@@ -207,11 +210,11 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <!-- Visualize scripts -->
     <script src="js/visualize-exploits-by-date.js"></script>
-    <script src="js/visualize-exploits-by-platform-type.js"></script>
 
     <!-- D3v3 scripts -->
     <script src="//d3js.org/d3.v3.min.js"></script>
     <!-- Visualize scripts -->
+    <script src="js/visualize-exploits-by-platform-type-zoomable.js"></script>
     <script src="js/visualize-exploits-by-type-date.js"></script>
 
   </body>

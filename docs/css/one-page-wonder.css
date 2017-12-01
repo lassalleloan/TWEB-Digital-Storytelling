@@ -49,9 +49,19 @@ a:hover.author {
     text-justify: inter-word;
 }
 
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+#legend {
+    text-align: center;
+}
+
 #exploitsDBLogo {
-  width: 300px;
-  height:100px;
+  width: 390px;
+  height:130px;
   margin-right:15px;
   float: right;
 }
@@ -84,4 +94,8 @@ svg {
   fill: none;
   stroke: #000;
   stroke-width: 2px;
+}
+
+rect {
+  fill: none;
 }
