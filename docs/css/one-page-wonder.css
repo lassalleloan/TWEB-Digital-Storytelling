@@ -44,7 +44,7 @@ a:hover.author {
   color: #fff;
 }
 
-#text {
+.text {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -53,10 +53,6 @@ a:hover.author {
   width: 20px;
   height: 20px;
   border-radius: 50px;
-}
-
-#legend {
-    text-align: center;
 }
 
 #exploitsDBLogo {
@@ -96,6 +92,17 @@ svg {
   stroke-width: 2px;
 }
 
-rect {
+rect:not(.selection) {
   fill: none;
+}
+
+.area {
+  fill: steelblue;
+  clip-path: url(#clip);
+}
+
+.zoom {
+  cursor: move;
+  fill: none;
+  pointer-events: all;
 }

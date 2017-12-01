@@ -50,7 +50,7 @@
             <div class="p-5">
               
               <h2 class="section-heading">Offensive security</h2>
-              <p id="text">
+              <p class="text">
                 <a href="https://www.offensive-security.com/">Offensive security</a> is a company that work in information security.
                 They provide tools, certification and even training courses.
                 They are particularly behind the well know <a href="https://en.wikipedia.org/wiki/Kali_Linux">Kali Linux</a> distribution which succeeds BackTrack.
@@ -65,7 +65,7 @@
               <br/>
 
               <h2 class="section-heading">Exploit-db</h2>
-              <p id="text">
+              <p class="text">
                 <img id="exploitsDBLogo" src="images/edb.png">
                 Exploit-db is a <b>database</b> that lists various known exploits. It contains <b>proofs of concept</b> or sometimes just the
                 right way to exploit a known vulnerability. <br/>
@@ -80,11 +80,10 @@
               <!-- Number of exploits by date -->
               <h2 class="section-heading">Number of exploits in the Database</h2>
               <br/>
-              <div class="container" id="exploits-by-date" width="1024" height="533">
-              </div>
+                <svg class="container" id="exploits-by-date" width="1024" height="533"></svg>
               <br/>
 
-              <p id="text">
+              <p class="text">
                 We can see on the previous graph the number of exploits entered in the database by year. <br/>
                 The real beginning of the use of exploit-db is around <b>1997</b>. It can be seen that at this time there were not
                 many exploits listed. This is undoubtedly because at that time security was less present in <b>people's mind</b>.
@@ -97,7 +96,7 @@
                 that have suffered an attack show us that this is <b>not</b> the case.
                 So why does the number of listed exploits go down ?
               </p>
-              <p id="text">
+              <p class="text">
                 This is because of a new type of market. This is a <b>market of vulnerabilities and exploits</b>.
                 Where a good person who has found a <b>0day</b> vulnerability or designed
                 a PoC to exploit it will shows his work to the community and make it available so that others users can
@@ -107,7 +106,7 @@
                 <a href="https://en.wikipedia.org/wiki/Cyber_spying">cyberespionage</a> is somewhere around
                 <b>$160 billion</b> per year. From there, it is easy to say that 0day exploits are as precious as gold, sometimes even more !
               </p>
-              <p id="text">
+              <p class="text">
                 So our system will <b>never</b> be 100% secure, it will never be possible. Security is improving, but the exploits become
                 more complex and therefore have more value. It is very difficult to estimate how vulnerabilities market
                 will evolve but this is a problem that shall not be underestimate. Even if we will not dig any more
@@ -119,14 +118,10 @@
               <h2 class="section-heading">Number of exploits per type and platform</h2>
               <br/>
               <!-- Number of exploits by platfrom and type -->
-              <div class="container" id="exploits-by-platform-type" width="1104" height="713">
-              </div>
-              <p id="legend">
-                Dos <div class="circle" style="background: #4682B8;"></div>Local <div class="circle" style="background: #79ADD2;"></div> Remote <div class="circle" style="background: #A6C9DF;"></div> Shellcode <div class="circle" style="background:  #CADBEA;"></div> Webapps <div class="circle" style="background: #D65E2A;"></div>
-              </p>
+              <svg class="container" id="exploits-by-platform-type" width="1024" height="533"></svg>
               <br/>
 
-              <p id="text">
+              <p class="text">
                 Let's take a look at the number of PoC per platform and type. <br/>
                 As you can see the php platform has a lot of PoC on webapps. This is because php is really <b>widespread</b>
                 in webapps developments and its easiness of use <b>increase</b> the risk of having security faults,
@@ -135,7 +130,7 @@
                 it means that it is more permissive that another language (like java for instance) and therefore
                 it makes it easier to introduce programming errors and then security breaches.
               </p>
-              <p id="text">
+              <p class="text">
                 Now about platform, we can see that the number of PoC is <b>proportional</b> to the number of a given platform'users.
                 That doesn't means that there is really a platform better than any others. That
                 means that there will be more research on a platform because it is more used.
@@ -152,7 +147,7 @@
               <br/>
 
               <h2 class="section-heading">Conclusion</h2>
-              <p id="text">
+              <p class="text">
                 As we have seen in this post, a database of known exploit is very <b>useful</b>. By having access to these exploits,
                 it is possible to <b>test</b> our application to ensure a good security. Although a 100% security <b>does not exist</b>,
                 exploit-db allows us to attest to a relative security at a given moment when performing pentest or
@@ -168,11 +163,10 @@
               <br/>
               
               <!-- Number of exploits by type and date (dynamic graph) -->
-              <div class="container" id="exploits-by-type-date" width="1024" height="533">
-              </div>
+              <div class="container" id="exploits-by-type-date" width="1024" height="533"></div>
               <br/>
 
-              <p id="text">
+              <p class="text">
                 Note that this short article is only an analysis on a <b>PoC</b> database, so it is only a very small
                 part of computer security. Nevertheless we encourage you to join this awesome community of security enthusiasts.
               </p>
@@ -214,7 +208,7 @@
     <!-- D3v3 scripts -->
     <script src="//d3js.org/d3.v3.min.js"></script>
     <!-- Visualize scripts -->
-    <script src="js/visualize-exploits-by-platform-type-zoomable.js"></script>
+    <script src="js/visualize-exploits-by-platform-type.js"></script>
     <script src="js/visualize-exploits-by-type-date.js"></script>
 
   </body>
