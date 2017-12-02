@@ -70,5 +70,5 @@ function stop {
 # Main
 start "${IMAGE_TAG}" "${CONTAINER_NAME}" "${PORT_HOST}"
 open_browser "${OSTYPE}" "${IP_HOST}" "${PORT_HOST}"
-read -p "Press enter key to stop ${CONTAINER_NAME} docker container ..."
+read -p "Press any key to stop all docker container ..."
 stop "${CONTAINER_NAME}"
