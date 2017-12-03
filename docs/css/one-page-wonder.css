@@ -49,37 +49,11 @@ a:hover.author {
     text-justify: inter-word;
 }
 
-.circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-}
-
 #exploitsDBLogo {
   width: 390px;
   height:130px;
   margin-right:15px;
   float: right;
-}
-
-#exploits-by-date {
-  width: 1024px;
-  height: 533px;
-}
-
-#exploits-by-platform-type {
-  width: 1024px;
-  height: 533px;
-  position: relative;
-}
-
-.node {
-  border: solid 1px white;
-  font: 10px sans-serif;
-  line-height: 12px;
-  overflow: hidden;
-  position: absolute;
-  text-indent: 2px;
 }
 
 svg {
@@ -92,7 +66,7 @@ svg {
   stroke-width: 2px;
 }
 
-rect:not(.selection) {
+rect:not(.selection):not(#overlay) {
   fill: none;
 }
 
@@ -105,4 +79,42 @@ rect:not(.selection) {
   cursor: move;
   fill: none;
   pointer-events: all;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus2 circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+#exploits-by-platform-type {
+  position: relative;
+}
+
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+
+.toolTip {
+  position: absolute;
+  display: none;
+  width: auto;
+  height: auto;
+  background: none repeat scroll 0 0 white;
+  border: 0 none;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -3px 3px 15px #888888;
+  color: black;
+  font: 12px sans-serif;
+  padding: 5px;
+  text-align: center;
 }
